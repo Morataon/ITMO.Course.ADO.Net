@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.afDataSet1 = new ITMO.Course.ADONet.FinalTask.AFDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonDataLoad = new System.Windows.Forms.Button();
@@ -49,6 +49,12 @@
             this.sqlSelectCommand1.CommandText = "SELECT        CustomerDetails.Customers.*\r\nFROM            CustomerDetails.Custom" +
     "ers";
             this.sqlSelectCommand1.Connection = this.sqlConnection1;
+            // 
+            // sqlConnection1
+            // 
+            this.sqlConnection1.ConnectionString = "Data Source=DESKTOP-7CC6RCE\\SQLEXPRESS;Initial Catalog=ApressFinancial;Integrated" +
+    " Security=True;Pooling=False";
+            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
             // sqlInsertCommand1
             // 
@@ -136,12 +142,6 @@
             this.sqlDataAdapter1.RowUpdating += new System.Data.SqlClient.SqlRowUpdatingEventHandler(this.sqlDataAdapter1_RowUpdating);
             this.sqlDataAdapter1.FillError += new System.Data.FillErrorEventHandler(this.sqlDataAdapter1_FillError);
             // 
-            // sqlConnection1
-            // 
-            this.sqlConnection1.ConnectionString = "Data Source=DESKTOP-7CC6RCE\\SQLEXPRESS;Initial Catalog=ApressFinancial;Integrated" +
-    " Security=True;Pooling=False";
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
-            // 
             // afDataSet1
             // 
             this.afDataSet1.DataSetName = "AFDataSet";
@@ -161,7 +161,7 @@
             this.buttonDataLoad.Name = "buttonDataLoad";
             this.buttonDataLoad.Size = new System.Drawing.Size(176, 23);
             this.buttonDataLoad.TabIndex = 1;
-            this.buttonDataLoad.Text = "Загрузить данные о клиентах";
+            this.buttonDataLoad.Text = "Load table";
             this.buttonDataLoad.UseVisualStyleBackColor = true;
             this.buttonDataLoad.Click += new System.EventHandler(this.buttonDataLoad_Click);
             // 
@@ -171,7 +171,7 @@
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(175, 23);
             this.buttonSave.TabIndex = 2;
-            this.buttonSave.Text = "Сохранить данные";
+            this.buttonSave.Text = "Save Changes";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -180,9 +180,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(222, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Таблица клиентов";
+            this.label1.Text = "DataBase AppressFinancial: Table Customers";
             // 
             // Form1
             // 
@@ -194,7 +194,7 @@
             this.Controls.Add(this.buttonDataLoad);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Final Task";
             ((System.ComponentModel.ISupportInitialize)(this.afDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
