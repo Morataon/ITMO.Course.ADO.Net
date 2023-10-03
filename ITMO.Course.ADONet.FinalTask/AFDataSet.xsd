@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AFDataSet" targetNamespace="http://tempuri.org/AFDataSet.xsd" xmlns:mstns="http://tempuri.org/AFDataSet.xsd" xmlns="http://tempuri.org/AFDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AFDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AFDataSet" msprop:Generator_DataSetName="AFDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Customers" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowEvArgName="CustomersRowChangeEvent" msprop:Generator_TablePropName="Customers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_RowClassName="CustomersRow" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_UserTableName="Customers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="CustomerId" msprop:Generator_ColumnPropNameInTable="CustomerIdColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerId" msprop:Generator_UserColumnName="CustomerId" type="xs:long" />
+              <xs:element name="CustomerTitleId" msprop:Generator_ColumnPropNameInRow="CustomerTitleId" msprop:Generator_ColumnPropNameInTable="CustomerTitleIdColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerTitleId" msprop:Generator_UserColumnName="CustomerTitleId" type="xs:int" />
+              <xs:element name="CustomerFirstName" msprop:Generator_ColumnPropNameInRow="CustomerFirstName" msprop:Generator_ColumnPropNameInTable="CustomerFirstNameColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerFirstName" msprop:Generator_UserColumnName="CustomerFirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomerOtherInitials" msprop:Generator_ColumnPropNameInRow="CustomerOtherInitials" msprop:Generator_ColumnPropNameInTable="CustomerOtherInitialsColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerOtherInitials" msprop:Generator_UserColumnName="CustomerOtherInitials" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomerLastName" msprop:Generator_ColumnPropNameInRow="CustomerLastName" msprop:Generator_ColumnPropNameInTable="CustomerLastNameColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerLastName" msprop:Generator_UserColumnName="CustomerLastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdressId" msprop:Generator_ColumnPropNameInRow="AdressId" msprop:Generator_ColumnPropNameInTable="AdressIdColumn" msprop:Generator_ColumnVarNameInTable="columnAdressId" msprop:Generator_UserColumnName="AdressId" type="xs:long" />
+              <xs:element name="AccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_UserColumnName="AccountNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountTypeId" msprop:Generator_ColumnPropNameInRow="AccountTypeId" msprop:Generator_ColumnPropNameInTable="AccountTypeIdColumn" msprop:Generator_ColumnVarNameInTable="columnAccountTypeId" msprop:Generator_UserColumnName="AccountTypeId" type="xs:int" />
+              <xs:element name="ClearBalance" msprop:Generator_ColumnPropNameInRow="ClearBalance" msprop:Generator_ColumnPropNameInTable="ClearBalanceColumn" msprop:Generator_ColumnVarNameInTable="columnClearBalance" msprop:Generator_UserColumnName="ClearBalance" type="xs:decimal" />
+              <xs:element name="UnclearBalance" msprop:Generator_ColumnPropNameInRow="UnclearBalance" msprop:Generator_ColumnPropNameInTable="UnclearBalanceColumn" msprop:Generator_ColumnVarNameInTable="columnUnclearBalance" msprop:Generator_UserColumnName="UnclearBalance" type="xs:decimal" />
+              <xs:element name="DateAdded" msprop:Generator_ColumnPropNameInRow="DateAdded" msprop:Generator_ColumnPropNameInTable="DateAddedColumn" msprop:Generator_ColumnVarNameInTable="columnDateAdded" msprop:Generator_UserColumnName="DateAdded" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Customers" />
+      <xs:field xpath="mstns:CustomerId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
